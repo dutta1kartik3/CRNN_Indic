@@ -12,7 +12,6 @@ for line in f:
 f.close()
 
 infile = "input.txt"
-outfile = "output.txt"
 
 words = []
 with open(infile, 'r') as f:
