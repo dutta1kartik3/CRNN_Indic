@@ -49,11 +49,8 @@ utilities.lua -->
     ascii2label:
     ranking always starts from 1
     ends at nClasses in config.lua
-
     label2ascii:
     opposite of ascii2label function
     and be careful of label ==0 case
-
-        
     loadAndResizeImage:
     Needs to be the set to the same values in DatasetLmdb.lua 
