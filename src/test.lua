@@ -33,13 +33,13 @@ loadModelState(model, snapshot)
 model:evaluate()
 print(string.format('Model loaded from %s', modelLoadPath))
 
-local file = io.open("lexicon-hindi.txt", "r");
-local lexicons = {}
-for line in file:lines() do
-	local temp = string.gsub(line, "\n", "")
-	table.insert (lexicons, temp);
-end
-file:close()
+--local file = io.open("lexicon-hindi.txt", "r");
+--local lexicons = {}
+--for line in file:lines() do
+	--local temp = string.gsub(line, "\n", "")
+	--table.insert (lexicons, temp);
+--end
+--file:close()
 
 local file2 = io.open(arg[1], "r"); --The file containing the Predicted outputs
 for line in file2:lines() do
