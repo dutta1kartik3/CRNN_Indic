@@ -20,48 +20,37 @@ Instructions for Training -- Following the stucture in IIIT-HW-Dev dataset, one 
 PS: The code is based upon the work done here: https://github.com/bgshih/crnn (Search in that repos forum in case of doubts)
 IIIT-HW-Dev dataset link: http://preon.iiit.ac.in/~kartik/IIIT-HW-Dev.zip
 
-####
+
 A basisc description of the various files and folders
-Model Folder:
-config.lua::
+Model Folder -->
+config.lua-
 Contains all the various arch. defn's
 like number of classes and the layers.
-
 snapshotInterval: After how many iter.
 a model is saved to disk
-
 nClasses: no of unique char's in the dataset.
 maxT: See from the model defn
 Model cannot recognize words having more characters than
 maxT.
-
 savePath: Path where the various snapshots are saved
 testInterval: After how many iterations you get test
 results
 trainSetPath and valSetPath need to be set where 
 the training and validation lmdb files are present
-------------------
+
 In src folder:
 DatasetLmdb.lua --> only need to change local imgW, imgH
 everywhere
-
 test.lua --> use for predicting results on test set, change
 snapshot path and wether to use lexicon free or lexicon based
 decoding.
-
 inference.lua --> lexicon size is fixed to 30 characters.
-
----------
-
-utilities.lua
+utilities.lua -->
     ascii2label:
     ranking always starts from 1
     ends at nClasses in config.lua
-
     label2ascii:
     opposite of ascii2label function
     and be careful of label ==0 case
-
-        
     loadAndResizeImage:
     Needs to be the set to the same values in DatasetLmdb.lua 
